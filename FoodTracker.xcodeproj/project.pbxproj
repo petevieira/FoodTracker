@@ -13,7 +13,6 @@
 		CBE427721DBFF65A00E4C51B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE427711DBFF65A00E4C51B /* Assets.xcassets */; };
 		CBE427751DBFF65A00E4C51B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBE427731DBFF65A00E4C51B /* LaunchScreen.storyboard */; };
 		CBE427801DBFF65B00E4C51B /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4277F1DBFF65A00E4C51B /* FoodTrackerTests.swift */; };
-		CBE4278B1DC02DCE00E4C51B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CBE4278A1DC02DCE00E4C51B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +36,6 @@
 		CBE4277B1DBFF65A00E4C51B /* FoodTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE4277F1DBFF65A00E4C51B /* FoodTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerTests.swift; sourceTree = "<group>"; };
 		CBE427811DBFF65B00E4C51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBE4278A1DC02DCE00E4C51B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +59,6 @@
 		CBE4275E1DBFF65A00E4C51B = {
 			isa = PBXGroup;
 			children = (
-				CBE4278A1DC02DCE00E4C51B /* Default-568h@2x.png */,
 				CBE427691DBFF65A00E4C51B /* FoodTracker */,
 				CBE4277E1DBFF65A00E4C51B /* FoodTrackerTests */,
 				CBE427681DBFF65A00E4C51B /* Products */,
@@ -185,7 +182,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBE427751DBFF65A00E4C51B /* LaunchScreen.storyboard in Resources */,
-				CBE4278B1DC02DCE00E4C51B /* Default-568h@2x.png in Resources */,
 				CBE427721DBFF65A00E4C51B /* Assets.xcassets in Resources */,
 				CBE427701DBFF65A00E4C51B /* Main.storyboard in Resources */,
 			);
@@ -416,7 +412,6 @@
 				CBE427861DBFF65B00E4C51B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		CBE427871DBFF65B00E4C51B /* Build configuration list for PBXNativeTarget "FoodTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -425,7 +420,6 @@
 				CBE427891DBFF65B00E4C51B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
