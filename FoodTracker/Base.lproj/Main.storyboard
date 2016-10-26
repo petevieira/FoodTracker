@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +20,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="4UB-Js-RYd">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="4UB-Js-RYd">
+                                <frame key="frameInset" minX="16" minY="80" width="343" height="460"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bi-hv-xOL">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -33,10 +35,20 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceU-NE-u0m">
                                         <state key="normal" title="Set Default Label Text"/>
+                                        <connections>
+                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CQZ-tR-WEb"/>
+                                        </connections>
                                     </button>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="YYo-OW-XmL">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="YYo-OW-XmL" secondAttribute="height" multiplier="1:1" id="4ga-gQ-fXf"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="YYo-OW-XmL" secondAttribute="trailing" id="ZcT-hf-uny"/>
                                     <constraint firstItem="fIi-th-CT1" firstAttribute="leading" secondItem="4UB-Js-RYd" secondAttribute="leading" id="lj8-Va-pAn"/>
+                                    <constraint firstItem="YYo-OW-XmL" firstAttribute="leading" secondItem="4UB-Js-RYd" secondAttribute="leading" id="o1J-2k-Dci"/>
                                     <constraint firstAttribute="trailing" secondItem="fIi-th-CT1" secondAttribute="trailing" id="x97-UU-a3f"/>
                                 </constraints>
                             </stackView>
@@ -48,10 +60,17 @@
                             <constraint firstItem="4UB-Js-RYd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ToU-Eg-ENI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mealNameLabel" destination="2Bi-hv-xOL" id="E9L-w3-PTA"/>
+                        <outlet property="nameTextField" destination="fIi-th-CT1" id="UAn-aE-NBd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="121.88905547226388"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPhoto" width="313" height="313"/>
+    </resources>
 </document>
