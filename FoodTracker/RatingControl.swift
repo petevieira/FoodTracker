@@ -16,6 +16,8 @@ class RatingControl: UIView {
 
     let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
     button.backgroundColor = UIColor.red
+    button.addTarget(self, action: #selector(RatingControl.ratingButtonTapped(button:)),
+                     for: .touchDown)
     addSubview(button)
   }
 
@@ -30,5 +32,8 @@ class RatingControl: UIView {
         // Drawing code
     }
     */
-
+  // MARK: Button Action
+  func ratingButtonTapped(button: UIButton) {
+    print("Button pressed ")
+  }
 }
