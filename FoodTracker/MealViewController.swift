@@ -24,12 +24,21 @@ class MealViewController: UIViewController, UITextFieldDelegate,
   var meal: Meal? // optional property. Can be nil at any time
 
     override func viewDidLoad() {
-    super.viewDidLoad()
-    // set the text field's delegate to be this class
-    nameTextField.delegate = self
+      super.viewDidLoad()
+
+      // set the text field's delegate to be this class
+      nameTextField.delegate = self
     
-    // Enable the Save button  only if the text field has a valid meal name
-    checkValidMealName()
+      // Set up views if editing an existing meal
+      if let meal = meal {
+        navigationItem.title = meal.name
+        nameTextField.text = meal.name
+        photoImageView.image = meal.photo
+        ratingControl.rating = meal.rating
+      }
+    
+      // Enable the Save button  only if the text field has a valid meal name
+      checkValidMealName()
   }
   // MARK: UITextFieldDelegate
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
