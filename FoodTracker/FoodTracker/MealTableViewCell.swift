@@ -8,12 +8,11 @@
 
 import UIKit
 
+// One of the table view cells
 class MealTableViewCell: UITableViewCell {
 
   // MARK: Properties
   @IBOutlet weak var nameLabel: UILabel!
-  @IBOutlet weak var photoImageBox: UIImageView!
-  @IBOutlet weak var ratingControl: RatingControl!
 
   override func awakeFromNib() {
     super.awakeFromNib()

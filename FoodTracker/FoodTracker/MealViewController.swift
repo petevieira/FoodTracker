@@ -8,13 +8,12 @@
 
 import UIKit
 
+// Controls what's displayed in the MealView scene (New Meal Scene)
 class MealViewController: UIViewController, UITextFieldDelegate,
   UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
   // MARK: Properties
   @IBOutlet weak var nameTextField: UITextField!
-  @IBOutlet weak var photoImageView: UIImageView!
-  @IBOutlet weak var ratingControl: RatingControl!
   @IBOutlet weak var saveButton: UIBarButtonItem!
 
   /*
@@ -33,8 +32,6 @@ class MealViewController: UIViewController, UITextFieldDelegate,
       if let meal = meal {
         navigationItem.title = meal.name
         nameTextField.text = meal.name
-        photoImageView.image = meal.photo
-        ratingControl.rating = meal.rating
       }
     
       // Enable the Save button  only if the text field has a valid meal name
@@ -64,23 +61,6 @@ class MealViewController: UIViewController, UITextFieldDelegate,
 
   }
   
-  // MARK: UIImagePickerControllerDelegate
-  func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-    // Dismiss the picker if the user canceled.
-    dismiss(animated: true, completion: nil)
-  }
-  
-  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-    // The info dictionary contains multiple representations of the image, and this uses the original.
-    let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-
-    // Set photoImageView to display the selected image.
-    photoImageView.image = selectedImage
-
-    // Dismiss the picker.
-    dismiss(animated: true, completion: nil)
-  }
-  
   // MARK: Navigation
   
   @IBAction func cancel(_ sender: UIBarButtonItem) {
@@ -98,29 +78,12 @@ class MealViewController: UIViewController, UITextFieldDelegate,
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if saveButton === sender as? UIBarButtonItem {
       let name = nameTextField.text ?? ""
-      let photo = photoImageView.image
-      let rating = ratingControl.rating
       // set the meal to be passed to the MealTableViewController after the unwind seque
-      meal = Meal(name: name, photo: photo, rating: rating)
+      meal = Meal(name: name)
     }
   }
   
   // MARK: Actions
-  @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
-    // hide the keyboard
-    nameTextField.resignFirstResponder()
-
-    // UIImagePickerController is a view controller that lets a user pick media from their photo library.
-    let imagePickerController = UIImagePickerController()
-    
-    // Only allow photos to be picked, not taken.
-    imagePickerController.sourceType = .photoLibrary
-
-    present(imagePickerController, animated: true, completion: nil)
-
-    // Make sure ViewController is notified when the user picks an image.
-    imagePickerController.delegate = self
-  }
 
 }
 

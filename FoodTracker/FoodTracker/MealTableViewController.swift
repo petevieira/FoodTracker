@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Controls what get's displayed in the table view
 class MealTableViewController: UITableViewController {
 
   // MARK Properties
@@ -29,14 +30,11 @@ class MealTableViewController: UITableViewController {
   }
   
   func loadSampleMeals() {
-    let photo1 = UIImage(named: "gyudon")!
-    let meal1 = Meal(name: "Gyudon", photo: photo1, rating: 4)!
+    let meal1 = Meal(name: "Gyudon")!
     
-    let photo2 = UIImage(named: "tanculiji")!
-    let meal2 = Meal(name: "Tangculiji", photo: photo2, rating: 5)!
+    let meal2 = Meal(name: "Tangculiji")!
     
-    let photo3 = UIImage(named: "misoshiru")!
-    let meal3 = Meal(name: "Miso Shiru", photo: photo3, rating: 4)!
+    let meal3 = Meal(name: "Miso Shiru")!
     
     meals += [meal1, meal2, meal3]
   }
@@ -66,8 +64,6 @@ class MealTableViewController: UITableViewController {
     let meal = meals[indexPath.row]
 
     cell.nameLabel.text = meal.name
-    cell.photoImageBox.image = meal.photo
-    cell.ratingControl.rating = meal.rating
 
     return cell
   }

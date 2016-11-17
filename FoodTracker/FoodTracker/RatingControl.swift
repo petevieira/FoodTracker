@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Rating stars layout
 class RatingControl: UIView {
 
   // MARK: Properties
