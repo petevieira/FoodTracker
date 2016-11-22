@@ -45,28 +45,47 @@ class ChecklistViewController: UITableViewController {
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath as IndexPath)
-    let label = cell.viewWithTag(1000) as! UILabel
+    let item = self.rows[indexPath.row]
 
-    label.text = self.rows[indexPath.row].text
+    configureTextForCell(cell: cell, withChecklistItem: item)
+    configureCheckmarkForCell(cell: cell, withChecklistItem: item)
 
     return cell
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     if let cell = tableView.cellForRow(at: indexPath) {
-      self.rows[indexPath.row].checked = !self.rows[indexPath.row].checked
+      let item = self.rows[indexPath.row]
+      item.toggleChecked()
 
-      configureCheckmarkForCell(cell: cell, indexPath: indexPath)
+      configureCheckmarkForCell(cell: cell, withChecklistItem: item)
     }
     tableView.deselectRow(at: indexPath, animated: true)
   }
   
-  func configureCheckmarkForCell(cell: UITableViewCell, indexPath: IndexPath) {
-    if self.rows[indexPath.row].checked {
+  func configureCheckmarkForCell(cell: UITableViewCell, withChecklistItem item: ChecklistItem) {
+    if item.checked {
       cell.accessoryType = .checkmark
     } else {
       cell.accessoryType = .none
     }
+  }
+  
+  func configureTextForCell(cell: UITableViewCell, withChecklistItem item: ChecklistItem) {
+    let label = cell.viewWithTag(1000) as! UILabel
+    label.text = item.text
+  }
+  
+  @IBAction func addItem() {
+    let newRowIndex = rows.count
+    let item = ChecklistItem()
+    item.text = "I am a new row"
+    item.checked = false
+    rows.append(item)
+    
+    let indexPath = IndexPath(row: newRowIndex, section: 0)
+    let indexPaths = [indexPath]
+    tableView.insertRows(at: indexPaths, with: .automatic)
   }
 }
 
