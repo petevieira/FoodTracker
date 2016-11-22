@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		CB314F641DDDE70400B40436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB314F631DDDE70400B40436 /* AppDelegate.swift */; };
-		CB314F661DDDE70400B40436 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB314F651DDDE70400B40436 /* ViewController.swift */; };
+		CB314F661DDDE70400B40436 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB314F651DDDE70400B40436 /* ChecklistViewController.swift */; };
 		CB314F691DDDE70400B40436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB314F671DDDE70400B40436 /* Main.storyboard */; };
 		CB314F6B1DDDE70400B40436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB314F6A1DDDE70400B40436 /* Assets.xcassets */; };
 		CB314F6E1DDDE70400B40436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB314F6C1DDDE70400B40436 /* LaunchScreen.storyboard */; };
+		CB6636C11DE4147D00A06631 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6636C01DE4147D00A06631 /* ChecklistItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CB314F601DDDE70400B40436 /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB314F631DDDE70400B40436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB314F651DDDE70400B40436 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB314F651DDDE70400B40436 /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		CB314F681DDDE70400B40436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB314F6A1DDDE70400B40436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB314F6D1DDDE70400B40436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB314F6F1DDDE70400B40436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB6636C01DE4147D00A06631 /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				CB314F631DDDE70400B40436 /* AppDelegate.swift */,
-				CB314F651DDDE70400B40436 /* ViewController.swift */,
+				CB314F651DDDE70400B40436 /* ChecklistViewController.swift */,
 				CB314F671DDDE70400B40436 /* Main.storyboard */,
 				CB314F6A1DDDE70400B40436 /* Assets.xcassets */,
 				CB314F6C1DDDE70400B40436 /* LaunchScreen.storyboard */,
 				CB314F6F1DDDE70400B40436 /* Info.plist */,
+				CB6636C01DE4147D00A06631 /* ChecklistItem.swift */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB314F661DDDE70400B40436 /* ViewController.swift in Sources */,
+				CB314F661DDDE70400B40436 /* ChecklistViewController.swift in Sources */,
+				CB6636C11DE4147D00A06631 /* ChecklistItem.swift in Sources */,
 				CB314F641DDDE70400B40436 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +304,7 @@
 				CB314F741DDDE70400B40436 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
