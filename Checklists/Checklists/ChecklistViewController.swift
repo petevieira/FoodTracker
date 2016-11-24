@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ChecklistViewController: UITableViewController {
+class ChecklistViewController: UITableViewController, AddItemViewControllerDelegate {
 
+  // MARK: Member Variables
   var rows: [ChecklistItem]
 
   required init?(coder aDecoder: NSCoder) {
@@ -27,7 +28,8 @@ class ChecklistViewController: UITableViewController {
     
     super.init(coder: aDecoder)
   }
-  
+
+  // MARK: Overrided Methods
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -63,6 +65,24 @@ class ChecklistViewController: UITableViewController {
     tableView.deselectRow(at: indexPath, animated: true)
   }
   
+  override func tableView(_ tableView: UITableView,
+                          commit editingStyle: UITableViewCellEditingStyle,
+                          forRowAt indexPath: IndexPath) {
+
+    rows.remove(at: indexPath.row)
+    let indexPaths = [indexPath]
+    tableView.deleteRows(at: indexPaths, with: .automatic)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "AddItem" {
+      let navigationController = segue.destination as! UINavigationController
+      let controller = navigationController.topViewController as! AddItemViewController
+      controller.delegate = self
+    }
+  }
+
+  // MARK: Methods
   func configureCheckmarkForCell(cell: UITableViewCell, withChecklistItem item: ChecklistItem) {
     if item.checked {
       cell.accessoryType = .checkmark
@@ -75,7 +95,8 @@ class ChecklistViewController: UITableViewController {
     let label = cell.viewWithTag(1000) as! UILabel
     label.text = item.text
   }
-  
+
+  // MARK: Actions
   @IBAction func addItem() {
     let newRowIndex = rows.count
     let item = ChecklistItem()
@@ -86,6 +107,28 @@ class ChecklistViewController: UITableViewController {
     let indexPath = IndexPath(row: newRowIndex, section: 0)
     let indexPaths = [indexPath]
     tableView.insertRows(at: indexPaths, with: .automatic)
+  }
+  
+  // MARK: AddItemViewControllerDelegate Implementations
+  func addItemViewControllerDidCancel(controller: AddItemViewController) {
+    dismiss(animated: true, completion: nil)
+  }
+  
+  func addItemViewController(controller: AddItemViewController, didFinishAddingItem item: ChecklistItem) {
+
+    // Get location of new item in tableview
+    let newRowIndex = rows.count
+
+    // Add item to rows data array
+    rows.append(item)
+
+    // Add row to tableview
+    let indexPath = IndexPath(row: newRowIndex, section: 0)
+    let indexPaths = [indexPath]
+    tableView.insertRows(at: indexPaths, with: .automatic)
+
+    // Close the AddItemViewController view
+    dismiss(animated: true, completion: nil)
   }
 }
 
