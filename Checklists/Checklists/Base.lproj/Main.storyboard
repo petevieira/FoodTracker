@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="872.79999999999995" y="-24.7376311844078"/>
         </scene>
-        <!--Add Item-->
+        <!--Item Detail-->
         <scene sceneID="psZ-a9-uQ1">
             <objects>
-                <tableViewController id="GVL-Op-Ddo" customClass="AddItemViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="GVL-Op-Ddo" userLabel="Item Detail" customClass="ItemDetailViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="YsP-sQ-fnA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,7 +74,7 @@
                         <sections>
                             <tableViewSection id="01E-hI-Li2">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddItemCell" id="tZF-hI-WaP">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemDetailCell" id="tZF-hI-WaP">
                                         <rect key="frame" x="0.0" y="35" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tZF-hI-WaP" id="MVj-Pc-Vij">
