@@ -14,6 +14,10 @@
 		CB314F6E1DDDE70400B40436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB314F6C1DDDE70400B40436 /* LaunchScreen.storyboard */; };
 		CB6636C11DE4147D00A06631 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6636C01DE4147D00A06631 /* ChecklistItem.swift */; };
 		CB6636C31DE432E200A06631 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6636C21DE432E200A06631 /* ItemDetailViewController.swift */; };
+		CBA467861DEEC12F005749DC /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA467851DEEC12F005749DC /* AllListsViewController.swift */; };
+		CBA467881DF53313005749DC /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA467871DF53313005749DC /* Checklist.swift */; };
+		CBA4678A1DF538E2005749DC /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CBA467891DF538E2005749DC /* README.rtf */; };
+		CBA4678C1DF7BEEE005749DC /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA4678B1DF7BEEE005749DC /* ListDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		CB314F6F1DDDE70400B40436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB6636C01DE4147D00A06631 /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		CB6636C21DE432E200A06631 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ItemDetailViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		CBA467851DEEC12F005749DC /* AllListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
+		CBA467871DF53313005749DC /* Checklist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
+		CBA467891DF538E2005749DC /* README.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		CBA4678B1DF7BEEE005749DC /* ListDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,10 @@
 				CB314F6F1DDDE70400B40436 /* Info.plist */,
 				CB6636C01DE4147D00A06631 /* ChecklistItem.swift */,
 				CB6636C21DE432E200A06631 /* ItemDetailViewController.swift */,
+				CBA467851DEEC12F005749DC /* AllListsViewController.swift */,
+				CBA467871DF53313005749DC /* Checklist.swift */,
+				CBA467891DF538E2005749DC /* README.rtf */,
+				CBA4678B1DF7BEEE005749DC /* ListDetailViewController.swift */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
@@ -132,6 +144,7 @@
 			files = (
 				CB314F6E1DDDE70400B40436 /* LaunchScreen.storyboard in Resources */,
 				CB314F6B1DDDE70400B40436 /* Assets.xcassets in Resources */,
+				CBA4678A1DF538E2005749DC /* README.rtf in Resources */,
 				CB314F691DDDE70400B40436 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,8 +157,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB314F661DDDE70400B40436 /* ChecklistViewController.swift in Sources */,
+				CBA4678C1DF7BEEE005749DC /* ListDetailViewController.swift in Sources */,
 				CB6636C31DE432E200A06631 /* ItemDetailViewController.swift in Sources */,
+				CBA467881DF53313005749DC /* Checklist.swift in Sources */,
 				CB6636C11DE4147D00A06631 /* ChecklistItem.swift in Sources */,
+				CBA467861DEEC12F005749DC /* AllListsViewController.swift in Sources */,
 				CB314F641DDDE70400B40436 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

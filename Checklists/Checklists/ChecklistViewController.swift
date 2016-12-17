@@ -12,6 +12,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 
   // MARK: Member Variables
   var rows: [ChecklistItem]
+  var checklist: Checklist!
 
   required init?(coder aDecoder: NSCoder) {
     self.rows = [ChecklistItem]()
@@ -23,6 +24,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
   // MARK: Overrided Methods
   override func viewDidLoad() {
     super.viewDidLoad()
+    title = self.checklist.name
     // Do any additional setup after loading the view, typically from a nib.
   }
 
