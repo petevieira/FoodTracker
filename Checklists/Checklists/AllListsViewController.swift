@@ -110,5 +110,12 @@ class AllListsViewController: UITableViewController,
     }
     dismiss(animated: true, completion: nil)
   }
+  
+  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    self.lists.remove(at: indexPath.row)
+    
+    let indexPaths = [indexPath]
+    tableView.deleteRows(at: indexPaths, with: .automatic)
+  }
 }
 
